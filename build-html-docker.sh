@@ -5,6 +5,7 @@ rm -rf -v $BUILD_DIR # else plantuml diagrams won't be rebuilt
 # do not copy revealjs
 mkdir -p $BUILD_DIR
 cp -r -p -v asciidocs/images $BUILD_DIR/images/
+cp -r -p -v asciidocs/plantuml $BUILD_DIR/plantuml/
 cp -r -p -v asciidocs/themes $BUILD_DIR
 cp -r -p -v asciidocs/docinfo.html $BUILD_DIR
 cp -r -p -v asciidocs/.nojekyll $BUILD_DIR
@@ -15,7 +16,7 @@ cp -r -p -v asciidocs/*.adoc $BUILD_DIR
 
 docker run --rm \
            -v ${PWD}/$BUILD_DIR:/documents \
-           asciidoctor/docker-asciidoctor  /bin/bash -c "asciidoctor \
+           asciidoctor/docker-asciidoctor:1.12.0  /bin/bash -c "asciidoctor \
            -r asciidoctor-diagram \
            -a icons=font \
            -a experimental=true \

@@ -1,4 +1,4 @@
-= Lecture Notes 5ahitm - SYP 21/22
+= Lecture Notes 5ahif - SYP 21/22
 T.Stütz
 1.0.0, 2021-09-23: Lecture Notes for SYP
 ifndef::imagesdir[:imagesdir: images]
@@ -21,6 +21,160 @@ endif::backend-html5[]
 //toc::[]
 
 == 2021-09-23
+
+=== Anleitung zum Verwenden von Intellij und WSL2
+=== Anleitung zum Installieren von Ubuntu in eigener Partition
+=== Youtrack Projekte anlegen
+
+=== Präsentationen
+
+* Zuerst Präsentationen über Projektstand
+
+|===
+|Thema |Gliederung
+
+|Ausgangssituation / Istzustand
+.5+|Was war (Was mache ich; warum mache ich)
+
+|Problemstellung
+
+|Ziel -> Leistungswirkung
+
+|Aufgabenstellung (Was gab es bereits)
+
+|Ergebnis -> Leistung
+
+|Wie weit sind wir?
+.2+|Was ist
+
+|Was funktioniert schon?
+
+|Was sind die nächsten Schritte?
+.2+|Was wird sein
+
+|Meilensteine für Projekt
+
+|===
+
+* Anschließend Präsentationen über Projektorganisation
+** Scrum-Tool
+** Welche nächsten User-Stories sind vereinbart
+** Dokumentation
+
+Hier entscheidet sich, ob das Projekt `Franklyn2` auf youtrack umsteigt oder nicht.
+
+
+== 2021-09-30 Do.
+
+Es wird festgestellt, dass bei Youtrack folgende Skills zu können sind:
+
+* Anlegen von User Stories
+* Anlegen von Tasks
+* Anlegen von Sprints und zuweisen zu User Stories und Tasks
+* https://www.jetbrains.com/help/youtrack/incloud/Apply-Commands-in-VCS-Commits.html#vcs-commit-placeholders[Verknüpfen von Youtrack und GitHub, window="_blank"]
+
+== 2021-10-07
+
+=== Systemtests
+
+image::systemtests.png[]
+
+* https://docs.asciidoctor.org/reveal.js-converter/latest/converter/features/
+
+* Wie erstellt man saubere Präsentationen mit asciidoctor/revealjs?
+
+* Überblick build-tools
+** ant
+** maven (xml)
+** gradle (groovy, kotlin)
+
+=== How to include a .puml-file into a .adoc-file
+
+==== Create a .puml-file
+
+* in `<project-root>/asciidocs/plantuml`
+
+[source, plantuml]
+----
+@startuml
+class Person{}
+
+class Hobby {}
+
+Person <-- Hobby : übt aus
+@enduml
+----
+
+==== Reference from .adoc-file
+
+[source,shell]
+----
+plantuml::plantuml/cld-demo.puml[]
+----
+
+or
+
+----
+ [plantuml, cld-demo, png]
+ ----
+ include::plantuml/cld-demo.puml[]
+ ----
+----
+
+plantuml::plantuml/cld-demo.puml[]
+
+== 2021-10-12
+
+=== Gruppe LeoCode
+
+* Es sind Arbeitspakete (User Stories inkl. Tasks) zu definieren und zwar jeweils mit einem konkret beschriebenen (lauffähigen) Ergebnis
+* Ein Systemarchitektur-Diagramm des geplanten System (inkl. Docker)
+* Wir beginnen mit dem Schwierigsten
+* Termin: 19.10.2021
+
+=== Fragen:
+* Fileaustausch zwischen Backend und Kafka (wirklich über gemeinsamen Ordner)
+
+== 2021-10-21
+
+* Monitore getragen
+* Quarkus App "guest-register" erstellt
+
+
+
+
+== 2021-11-05
+
+=== Deployment auf oravm
+
+==== Forken des Template-Repos
+
+IMPORTANT: Nicht in eine Organisation forken, sondern direkt zum User-Account
+
+https://github.com/caberger/leocloud
+
+image::k8s-01-forked-repo.png[]
+
+
+==== gh-actions
+
+* jobs
+** Jobs können parallel ausgeführt werden
+
+* steps
+** Ein Job besteht aus mehreren Steps
+** Die Steps werden sequentiell (hintereinander) ausgeführt
+
+image::overview-gh-actions.png[]
+
+
+
+
+
+
+
+
+
 
 
 ////
