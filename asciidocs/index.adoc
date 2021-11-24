@@ -168,14 +168,35 @@ image::k8s-01-forked-repo.png[]
 image::overview-gh-actions.png[]
 
 
+== 2021-11-11
+
+=== Übung gh-actions
+
+. Es ist eine gh-actions pipeline für das eigene Mikroprojekt auf einen oravm-Server zu erstellen.
+. Es sind mindestens 2 Feature Branches zu erstellen (für beliebige aber nicht sinnfreie Features) mit anschließenden Commits
+. Erstellung und Dokumentation (mit Screenshots) eines Pull-Request
+. Termin: 30.11.2021
 
 
+=== Projektarbeit ist zu dokumentieren
 
+* Die Teams werden darauf hingewiesen, dass die Projektarbeit zu dokumentieren ist:
+** Zuerst sind im Youtrack User-Stories einzutragen
+** Für diese User-Stories sind Tasks zu erstellen
+*** Diese müssen den einzelnen Teammitgliedern zugewiesen werden
+*** weiters sind die Sprints (zeitliche Komponente) festzulegen
+*** Die einzelnen Commits sind den Tasks zuzuordnen.. Im Youtrack muss man ersehen
 
+image::zuordnung-commit-task-yt.png[]
 
+== 2021-11-16
 
+=== Projekt IoT-ValueSimulator
 
-
+[plantuml, cld-demo, png]
+----
+include::plantuml/ucd-iot-value-simulator.puml[]
+----
 
 ////
 |===
