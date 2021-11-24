@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor "Iot-in-charge" as user
+
+rectangle ValueSimulator {
+  usecase "assign room to ValueSimulator" as uc1
+  usecase "remove room from ValuSimulator" as uc2
+  usecase "config values for room" as uc3
+  usecase "send values to mqtt" as uc4
+}
+
+actor "MQTT-Server" as mqtt
+
+user -- uc1
+user -- uc2
+user -- uc3
+uc4 -- mqtt
+@enduml
